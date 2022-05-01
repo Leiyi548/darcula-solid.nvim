@@ -278,8 +278,8 @@ return lush(function()
 
 		-- telescope
 
-		TelescopeSelection({ fg = CursorColumn }),
-		TelescopeSlectionCaret({ fg = CursorColumn }),
+		TelescopeSelection({ CursorColumn }),
+		TelescopeSlectionCaret({ CursorColumn }),
 		TelescopeMultiSelection({ fg = comment }),
 		TelescopeNormal({ fg = comment }),
 		TelescopeMatching({ fg = orange }),
