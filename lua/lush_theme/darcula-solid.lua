@@ -280,7 +280,7 @@ return lush(function()
 
 		TelescopeSelection({ fg = CursorColumn }),
 		TelescopeSlectionCaret({ fg = CursorColumn }),
-		TelescopeMultiSelection = base.GruvboxGray,
+		TelescopeMultiSelection({ fg = comment }),
 		TelescopeNormal({ fg = comment }),
 		TelescopeMatching({ fg = orange }),
 		TelescopePromptPrefix({ fg = orange }),
