@@ -288,7 +288,7 @@ return lush(function()
 		-- cmp
 		CmpItemKind({ fg = orange }),
 		CmpItemAbbrMatch({ fg = blue }),
-		CmpItemAbbr({ fg = blue }),
+		CmpItemAbbr({ fg = fg }),
 		CmpItemMenu({ fg = comment }),
 	}
 end)
