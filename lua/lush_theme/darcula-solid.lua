@@ -286,5 +286,9 @@ return lush(function()
 		TelescopePromptPrefix({ fg = orange }),
 
 		-- cmp
+		CmpItemKind({ fg = orange }),
+		CmpItemAbbrMatch({ fg = blue }),
+		CmpItemAbbr({ fg = blue }),
+		CmpItemMenu({ fg = comment }),
 	}
 end)
