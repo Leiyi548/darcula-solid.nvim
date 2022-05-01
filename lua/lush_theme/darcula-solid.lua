@@ -18,6 +18,17 @@
 local lush = require("lush")
 local hsl = lush.hsl
 
+local C = {
+	fg = "#D4D4D4",
+	bg = "#1E1E1E",
+	gray = "#808080",
+	ui_blue = "#264F78",
+	ui2_blue = "#042E48",
+	ui3_blue = "#0195F7",
+	ui4_blue = "#75BEFF",
+	ui_orange = "#E8AB53",
+	ui_purple = "#B180D7",
+}
 --------------------------------------------------
 
 -- GUI options
@@ -142,10 +153,10 @@ return lush(function()
 		LspDiagnosticsDefaultInformation({ fg = fg }),
 		LspDiagnosticsDefaultHint({ fg = teal }),
 
-		--LspDiagnosticsVirtualTextError       { };    -- "Error" diagnostic virtual text
-		--LspDiagnosticsVirtualTextWarning     { };    -- "Warning" diagnostic virtual text
-		--LspDiagnosticsVirtualTextInformation { };    -- "Information" diagnostic virtual text
-		--LspDiagnosticsVirtualTextHint        { };    -- "Hint" diagnostic virtual text
+		LspDiagnosticsVirtualTextError({ fg = red }), -- "Error" diagnostic virtual text
+		LspDiagnosticsVirtualTextWarning({ fg = yellow }), -- "Warning" diagnostic virtual text
+		LspDiagnosticsVirtualTextInformation({ fg = fg }), -- "Information" diagnostic virtual text
+		LspDiagnosticsVirtualTextHint({ fg = blue }), -- "Hint" diagnostic virtual text
 		LspDiagnosticsUnderlineError({ gui = un }), -- underline "Error" diagnostics
 		LspDiagnosticsUnderlineWarning({ gui = un }), -- underline "Warning" diagnostics
 		LspDiagnosticsUnderlineInformation({ gui = un }), -- underline "Information" diagnostics
@@ -286,9 +297,36 @@ return lush(function()
 		TelescopePromptPrefix({ fg = orange }),
 
 		-- cmp
-		CmpItemKind({ fg = orange }),
-		CmpItemAbbrMatch({ fg = blue }),
-		CmpItemAbbr({ fg = fg }),
-		CmpItemMenu({ fg = comment }),
+		-- CmpItemKind({ fg = orange }),
+		-- CmpItemAbbrMatch({ fg = blue }),
+		-- CmpItemAbbr({ fg = fg }),
+		-- CmpItemMenu({ fg = comment }),
+		CmpItemAbbrMatch({ C.ui3_blue }),
+		CmpItemAbbrMatchFuzzy({ C.ui3_blue }),
+		CmpItemKindFunction({ C.ui_purple }),
+		CmpItemKindMethod({ C.ui_purple }),
+		CmpItemKindConstructor({ C.ui_orange }),
+		CmpItemKindClass({ C.ui_orange }),
+		CmpItemKindEnum({ C.ui_orange }),
+		CmpItemKindEvent({ C.ui_purple }),
+		CmpItemKindInterface({ C.light_blue }),
+		CmpItemKindStruct({ C.ui4_blue }),
+		CmpItemKindVariable({ C.ui4_blue }),
+		CmpItemKindField({ C.ui4_blue }),
+		CmpItemKindProperty({ C.ui4_blue }),
+		CmpItemKindEnumMember({ C.light_blue }),
+		CmpItemKindConstant({ C.ui4_blue }),
+		CmpItemKindKeyword({ C.fg }),
+		CmpItemKindModule({ C.fg }),
+		CmpItemKindValue({ C.fg }),
+		CmpItemKindUnit({ C.fg }),
+		CmpItemKindText({ C.fg }),
+		CmpItemKindSnippet({ C.fg }),
+		CmpItemKindFile({ C.fg }),
+		CmpItemKindFolder({ C.fg }),
+		CmpItemKindColor({ C.fg }),
+		CmpItemKindReference({ C.fg }),
+		CmpItemKindOperator({ C.fg }),
+		CmpItemKindTypeParameter({ C.fg }),
 	}
 end)
