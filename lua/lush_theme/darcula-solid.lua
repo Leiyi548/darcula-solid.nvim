@@ -275,5 +275,16 @@ return lush(function()
 		NvimTreeIndentMarker({ fg = hsl(204, 3, 32) }),
 		NvimTreeRootFolder({ fg = folder }),
 		NvimTreeFolderIcon({ fg = folder }),
+
+		-- telescope
+
+		TelescopeSelection({ fg = CursorColumn }),
+		TelescopeSlectionCaret({ fg = CursorColumn }),
+		TelescopeMultiSelection = base.GruvboxGray,
+		TelescopeNormal({ fg = comment }),
+		TelescopeMatching({ fg = orange }),
+		TelescopePromptPrefix({ fg = orange }),
+
+		-- cmp
 	}
 end)
