@@ -233,7 +233,7 @@ return lush(function()
 		TSConstructor({ fg = fg }), -- For constructor: `{}` in Lua and Java constructors.
 		TSKeywordFunction({ Keyword }),
 
-		TSKeyword({ Keyword }),
+		TSKeyword({ Keyword, gui = bf }),
 		TSConditional({ Conditional }),
 		TSRepeat({ Repeat }),
 		TSLabel({ Label }),
